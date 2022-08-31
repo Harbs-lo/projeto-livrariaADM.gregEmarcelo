@@ -63,28 +63,28 @@ export default {
             v-model="livro.titulo"
             placeholder="Título"
           />
-          <div class="select_categorias">
-            <select name="cat" id="categorias" v-model="livro.categoria">
-              <option disabled value="">escolha uma categoria</option>
-              <option
-                v-for="categoria of categorias"
-                :key="categoria.id"
-                :value="categoria.descricao"
-              >
-                {{ categoria.descricao }}
-              </option>
-            </select>
-            <select v-model="livro.autor">
-              <option disabled value="">escolha uma categoria</option>
-              <option
-                v-for="autor of autores"
-                :key="autor.id"
-                :value="autor.nome"
-              >
-                {{ autor.nome }}
-              </option>
-            </select>
-          </div>
+
+          <select name="cat" id="categorias" v-model="livro.categoria">
+            <option disabled value="">escolha uma categoria</option>
+            <option
+              v-for="categoria of categorias"
+              :key="categoria.id"
+              :value="categoria.descricao"
+            >
+              {{ categoria.descricao }}
+            </option>
+          </select>
+          <select v-model="livro.autor">
+            <option disabled value="">escolha uma categoria</option>
+            <option
+              v-for="autor of autores"
+              :key="autor.id"
+              :value="autor.nome"
+            >
+              {{ autor.nome }}
+            </option>
+          </select>
+
           <div class="select_autor">
             <select v-model="livro.editora">
               <option disabled value="">escolha uma categoria</option>
@@ -97,7 +97,6 @@ export default {
               </option>
             </select>
           </div>
-
           <input
             id="input_quant"
             type="number"
@@ -130,7 +129,6 @@ export default {
           </thead>
           <tbody>
             <tr v-for="livro in livros" :key="livro">
-
               <td>{{ livro.id }}</td>
               <td>{{ livro.titulo }}</td>
               <td>{{ livro.Categoria }}</td>
@@ -140,10 +138,10 @@ export default {
               <td>{{ livro.preco }}</td>
               <td>
                 <button @click="excluir(livro)">excluir</button>
-                 <button @click="editar(livro)">editar</button>
+                <button @click="editar(livro)">editar</button>
               </td>
             </tr>
-          </tbody>	
+          </tbody>
         </table>
       </div>
     </div>

@@ -10,18 +10,20 @@ export default {
 <template>
   <main>
     <div class="livros">
-      <div>
+      <div class="titulo-home">
          <h2>Livros Adicionados</h2>
       </div>
        <div class="conteudo">
-        <div cass="cont1">
         <BlocoConteudo />
         <BlocoConteudo />
-        </div>
-        <div cass="cont2">
         <BlocoConteudo />
         <BlocoConteudo />
-        </div>
+       </div>
+       <div class="conteudo">
+        <BlocoConteudo />
+        <BlocoConteudo />
+        <BlocoConteudo />
+        <BlocoConteudo />
        </div>
     </div>
   </main>
